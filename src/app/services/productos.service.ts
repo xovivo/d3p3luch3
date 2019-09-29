@@ -22,7 +22,7 @@ export class ProductosService {
 
   private cargarProductos() {
 
-    return new Promise(  ( resolve, reject ) => {
+    return new Promise(  ( resolve ) => {
 
       this.http.get('https://dpeluche.com/api/dpelucheInicio.php')
           .subscribe( (resp: Producto[]) => {
@@ -71,7 +71,7 @@ export class ProductosService {
 
       const tituloLower = prod.titulo.toLocaleLowerCase();
 
-      if ( prod.categoria.indexOf( termino ) >= 0 || tituloLower.indexOf( termino ) >= 0  ) {
+      if ( prod.id.indexOf( termino ) >= 0 || tituloLower.indexOf( termino ) >= 0  ) {
         this.productosFiltrado.push( prod );
       }
 

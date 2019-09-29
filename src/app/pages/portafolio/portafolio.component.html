@@ -21,7 +21,7 @@
       </div>
       <p>Espere por favor</p>
     </div>
-    <main class="main-content" style="height: 2000px; width: 100%;">
+    <main class="main-content" style="height: 100%; width: 100%; margin: 0;">
        <div class="container-fluid">
           <div class="row">
       <div id="manCategoria" class="col-lg-3 col-md-3 novisible">
@@ -334,23 +334,13 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-          <!-- <div class="entry-content-page"> -->
-              <!-- <div class="column-inner"> -->
                     <div class="container-fluid" id="slide">
 
                       <div class="row">
-
-                        <!--=====================================
-		DIAPOSITIVAS
-		======================================-->
-
                         <ul style="width: 600%;">
-
                           <li style="width: 16.6667%;">
-
                             <img src="https://dpeluche.com/backend/vistas/img/slide/slide1/fondo.jpg"
                               alt="https://dpeluche.com/backend/vistas/img/slide/slide1/fondo.jpg">
-
                             <div class="slideOpciones slideOpcion1">
                               <div class="textosSlide" style="top:0%; left:0%; width:0%; right:0%">
 
@@ -517,47 +507,10 @@
                           <h2>rana</h2>
                           <p>rana</p>
                         </div>
-                      </a></div>
-                      <div class="container-fluid well well-sm barraProductos">
-
-                        <div class="container-fluid">
-
-                          <div class="row">
-
-                            <div class="col-xs-12 organizarProductos">
-
-                              <div class="btn-group pull-right">
-
-                                <button type="button" class="btn btn-default btnGrid" id="btnGrid0">
-
-                                  <i class="fa fa-th" aria-hidden="true"></i>
-
-                                  <span class="col-xs-0 pull-right"> GRID</span>
-
-                                </button>
-
-                                <button type="button" class="btn btn-default btnList" id="btnList0">
-
-                                  <i class="fa fa-list" aria-hidden="true"></i>
-
-                                  <span class="col-xs-0 pull-right"> LIST</span>
-
-                                </button>
-
-                              </div>
-
-                            </div>
-
-                          </div>
-
-                        </div>
-
-                      </div>
-
-
-                      <div class="container-fluid productos">
-    
-                      <div class="container">
+                      </a>
+                    </div>
+                    <div class="container-fluid infoproducto">
+                      <div class="container-fluid">
                         
                         <div class="row">
                           
@@ -569,7 +522,7 @@
                             
                             <!--===============================================-->
 
-                            <div class="col-sm-6 col-xs-12">
+                            <div class="col-sm-12 col-xs-12">
                               
                               <h1><small>ARTÍCULOS NUEVOS </small></h1>
 
@@ -577,7 +530,7 @@
 
                             <!--===============================================-->
 
-                            <div class="col-sm-6 col-xs-12">
+                            <div class="col-sm-12 col-xs-12">
                               
                               <a href="#" >
                                 
@@ -599,17 +552,18 @@
 
                         </div>
 
-                        <ul *ngIf="!productosService.cargando" class="grid0">
+                        <ul *ngIf="!productosService.cargando"
+                          class="grid0">
                           
                           <!-- Producto 1 -->
-
-                          <li *ngFor="let producto of productosService.productos" [routerLink]="['/item', producto.cod ]" class="col-md-3 col-sm-6 col-xs-12">
+                          
+                          <li *ngFor="let producto of productosService.productos" [routerLink]="['/item', producto.id ]" class="col-md-3 col-sm-3 col-xs-3 col-lg-3 visorImg" style="height: 300px;">
                             
                             <!--===============================================-->
                       
-                            <figure>
+                            <figure class="img-thumbnail visor">
                               
-                              <a href="#" class="pixelProducto">
+                              <a href="#" class="pixelProducto rk-item ae-masonry__item">
                                 
                                 <img src="{{ producto.url }}" alt="{{ producto.url }}" class="img-responsive">
 
@@ -617,17 +571,18 @@
 
                             </figure>
 
+                           
                             <!--===============================================-->
 
                             <h4>
                               
                             
                                 
-                                <a href="#" class="pixelProducto">
+                                <p href="#" class="pixelProducto">
                                   
                                   {{ producto.titulo }}<br><br>
 
-                                </a>	
+                                </p>	
 
                             
                             
@@ -635,15 +590,15 @@
 
                             <!--===============================================-->
                             
-                            <div class="col-xs-6 precio">
+                            <div class="col-xs-8 precio">
                               
-                              <h2><small>{{ producto.titulo }}</small></h2>
-
+                              <h2>$ {{ producto.precio }}</h2>
+                              
                             </div>
 
                             <!--===============================================-->
 
-                            <div class="col-xs-6 enlaces">
+                            <div class="col-xs-4 enlaces">
                               
                               <div class="btn-group pull-right">
                                 
@@ -671,58 +626,10 @@
 
 
                         </ul>
-
-                        <ul *ngIf="!productosService.cargando" class="list0" style="display:none">
-                          
-                          <li *ngFor="let producto of productosService.productos" [routerLink]="['/item', producto.cod ]"
-                            class="col-xs-12">
-                            
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                              
-                              <figure>
-                              
-                                <a href="#" class="pixelProducto"><img src="{{ producto.url }}" class="img-responsive"></a>
-
-                              </figure>
-
-                            </div>
-
-                            <div class="col-lg-10 col-md-7 col-sm-8 col-xs-12">
-                              
-                              <h1>
-                                <small>
-                                
-                                  <a href="#" class="pixelProducto">{{ producto.titulo }}</a>
-
-                                </small>
-
-                              </h1>
-
-                              <p class="text-muted">{{ producto.categoria }}</p>
-
-                              <h2><small>GRATIS</small></h2>
-
-                              <div class="btn-group pull-left enlaces">
-                                    
-                                <button type="button" class="btn btn-default btn-xs deseos"  idProducto="470" data-toggle="tooltip" title="Agregar a mi lista de deseos">
-
-                                  <i class="fa fa-heart" aria-hidden="true"></i>
-                                </button>
-
-                                <a href="#" class="pixelProducto">
-                                  <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" title="Ver producto">
-                                      <i class="fa fa-eye" aria-hidden="true"></i>
-                                    </button>
-                                </a>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
           </div>
-        <!-- </div> -->
-      <!-- </div> -->
+        
     </main>

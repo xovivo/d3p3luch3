@@ -1,6 +1,7 @@
 export interface Producto {
-    categoria: string;
-    cod: string;
+    descripcion: string;
+    id: string;
     titulo: string;
     url: string;
+    precio: string;
 }
