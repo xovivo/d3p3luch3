@@ -1,11 +1,11 @@
 {
   "name": "DPeluche",
   "short_name": "DPluch3",
-  "theme_color": "#ffffff",
-  "background_color": "#fffff",
+  "theme_color": "#fff",
+  "background_color": "#fff",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/index.html",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",

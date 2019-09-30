@@ -1,9 +1,9 @@
 export interface ProductoDescripcion {
-  categoria: string;
-  desc1: string;
-  desc2: string;
-  producto: string;
-  resumen: string;
-  subtitulo1: string;
-  subtitulo2: string;
+  descripcion: string;
+  titulo: string;
+  titular: string;
+  id: string;
+  url: string;
+  precio: string;
+  peso: string;
 }

@@ -15,8 +15,7 @@ export class PaisComponent implements OnInit {
   constructor(
     public paisesService: PaisesService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
-  ) { }
+    private router: Router) { }
 
   ngOnInit() {
 

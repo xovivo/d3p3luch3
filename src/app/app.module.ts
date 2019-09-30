@@ -15,6 +15,16 @@ import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { SearchComponent } from './pages/search/search.component';
+import { PaisesComponent } from './pages/paises/paises.component';
+import { InfoproductoComponent } from './pages/infoproducto/infoproducto.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
+import { PedidoComponent } from './pages/pedido/pedido.component';
+import { CategoriasComponent } from './pages/categorias/categorias.component';
+import { DtemporadaComponent } from './pages/dtemporada/dtemporada.component';
+import { CatalogosComponent } from './pages/catalogos/catalogos.component';
+import { EmpresaComponent } from './pages/empresa/empresa.component';
+import { PoliticasComponent } from './pages/politicas/politicas.component';
+import { PaisComponent } from './pages/pais/pais.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +34,17 @@ import { SearchComponent } from './pages/search/search.component';
     PortafolioComponent,
     AboutComponent,
     ItemComponent,
-    SearchComponent
+    SearchComponent,
+    PaisesComponent,
+    PaisComponent,
+    InfoproductoComponent,
+    CarritoComponent,
+    PedidoComponent,
+    CategoriasComponent,
+    DtemporadaComponent,
+    CatalogosComponent,
+    EmpresaComponent,
+    PoliticasComponent
   ],
   imports: [
     BrowserModule,

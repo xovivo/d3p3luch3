@@ -8,7 +8,7 @@
 
     #nav {
         background: none !important;
-        zoom: 0.9 !important;
+        zoom: 0.7 !important;
         height: 50px !important;
     }
 
@@ -20,10 +20,7 @@
         font-weight: bold !important;
     }
 
-    .pageHeader {
-        position: fixed;
-    }
-
+  
 
 
     .quick-access {
@@ -36,7 +33,7 @@
 
 
     .separa {
-        height: 30vh !important;
+        height: 20vh !important;
     }
 
 
@@ -62,21 +59,12 @@
 
 
 
-    .pageHeader {
-    position: relative;
-    left: 0;
-    display: flex;
-    top:0px;
-    right: 0;
-    background: none;
-}
-
     .mundo {
         position: relative;
         font-size: 15vh;
         text-align: center;
         font-family: 'Pacifico', cursive;
-        top: 20px;
+        top: 0px;
         color:#FE0005;
         text-shadow: 0px 0px 15px rgb(255, 255, 255);
 }
@@ -86,9 +74,9 @@
 .content_ {
     position: relative;
     width: 100%;
-    height:20vh;
+    height:15vh;
     background: url(mapa1.png);
-    overflow: hidden;
+    background-size: 100%;
     -webkit-animation-name: rotacion;
     animation-name: rotacion;
     -webkit-animation-duration: 30s;
@@ -116,10 +104,6 @@ ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
 
 @media (max-width:1199px) and (min-width:992px) {
 
-.pageHeader {
-    position: fixed;
-
-}
 
 .fixed-action-btn {
     bottom: 100px !important;
@@ -156,16 +140,6 @@ ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
 #nav {
     zoom: 1 !important;
     height: 40px !important;
-}
-
-
-.pageHeader {
-    position: relative;
-    left: 0;
-    display: flex;
-    top: 0px;
-    right: 0;
-    z-index: 1000;
 }
 
     .mundo {
@@ -207,9 +181,6 @@ ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
 =============================================*/
 
 @media (max-width:991px) and (min-width:768px) {
-.pageHeader {
-    position: fixed;
-}
 
 .fixed-action-btn {
     bottom: 100px !important;
@@ -259,14 +230,6 @@ ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
 }
 
 
-.pageHeader {
-    position: relative;
-    left: 0;
-    display: flex;
-    top: 0px;
-    right: 0;
-    z-index: 1000;
-}
 
     .mundo {
         position: relative;
@@ -319,7 +282,7 @@ MOVIL (XS revisamos en 320px)
     }
 
 .pageHeader {
-    position: fixed;
+    /* position: fixed; */
 
 }
 
@@ -395,21 +358,21 @@ MOVIL (XS revisamos en 320px)
 #nav {
     zoom: 0.9 !important;
 }
-.pageHeader {
+/* .pageHeader {
     position: fixed;
     left: 0;
     display: flex;
     top: 100px;
     right: 0;
     display: none;
-}
+} */
 
-.page-header{
+/* .page-header{
 position: fixed;
 left: 0;
 right: 0;
 z-index: 1000;
-}
+} */
 
       .mundo {
           position: relative;
@@ -447,29 +410,23 @@ z-index: 1000;
   position: relative !important;
   padding: 0 !important;
   width: 100% !important;
-  margin-top: -1px !important;
+  margin-top: -8px !important;
   height: 100% !important;
 
 }
 .quick-access ul li a span
 {
   position: relative !important;
-  padding: 0 !important;
-  font-size: 4vh !important;
-  text-align: center !important;
-  margin: 25% !important;
-  padding: 5px !important;
+  font-size: 3vh !important;
+  margin-left: 25px !important;
+  margin-bottom: -30px !important;
 }
+
 .novisible{
   display: none;
 }
 
-.quick-access ul{
-  position: relative;
-  height: 100% !important;
 
-
-}
 }
 
 
