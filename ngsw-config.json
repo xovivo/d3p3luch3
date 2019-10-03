@@ -9,12 +9,7 @@
           "/favicon.ico",
           "/index.html",
           "/*.css",
-          "/*.js",
-          "/manifest.json"
-        ],
-        "urls": [
-          "https://stackpath.bootstrapcdn.com/**",
-          "https://restcountries.eu/data/**"
+          "/*.js"
         ]
       }
     }, {
@@ -25,20 +20,6 @@
         "files": [
           "/assets/**"
         ]
-      }
-    }
-  ],
-  "dataGroups": [
-    {
-      "name": "pais-api",
-      "urls": [
-        "https://dpeluche.com/api/**"
-      ],
-      "cacheConfig": {
-        "maxSize": 20,
-        "maxAge": "1h",
-        "timeout": "5s",
-        "strategy": "freshness"
       }
     }
   ]
