@@ -354,16 +354,19 @@
         <div class="ae-masonry-xs-2 ae-masonry-md-4">
          <ul *ngIf="!productosService.cargando" class="grid0">
           <li *ngFor="let producto of productosService.productos" [routerLink]="['/item', producto.id ]"
-            class="img-thumbnail">
+            class="img-thumbnail" style="padding:10px">
+            <p class="medidass"><span class="medidaNums">26 cm</span></p>
+            <p class="medidas"><span class="medidaNum">26 cm</span></p>
             <figure>
               <a [routerLink]="['/item', producto.id ]" class="pixelProducto">
-              <img src="{{ producto.url }}" alt="{{ producto.url }}" class="img-responsive">
+              <img src="https://dpeluche.com/backend/{{ producto.portada }}" alt="https://dpeluche.com/backend/{{ producto.portada }}" class="img-responsive">
               </a>
             </figure>
+            
            <h4>
            <p href="#" class="pixelProducto">
-             {{ producto.titulo }}<br><br>
-           </p>	
+             {{ producto.titulo }}
+           </p>
            </h4>
            <div class="col-xs-8 precio">
             <h2>$ {{ producto.precio }}</h2>
@@ -376,7 +379,7 @@
              <a href="#" class="pixelProducto">
              <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" title="Ver producto">
               <i class="fa fa-eye" aria-hidden="true"></i>
-             </button>	
+             </button>
              </a>
             </div>
            </div>

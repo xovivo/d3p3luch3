@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Producto } from '../interfaces/producto.interface';
+import { ProductoDescripcion } from '../interfaces/producto-descripcion.interface';
 
 
 @Injectable({
@@ -10,21 +11,21 @@ export class ProductosService {
 
   cargando = true;
   productos: Producto[] = [];
+  productoDedc: ProductoDescripcion[] = [];
   productosFiltrado: Producto[] = [];
 
 
   constructor( private http: HttpClient ) {
 
     this.cargarProductos();
-
   }
 
 
   private cargarProductos() {
 
-    return new Promise(  ( resolve ) => {
+    return new Promise(  ( resolve, reject ) => {
 
-      this.http.get('https://dpeluche.com/api/dpelucheInicio.php')
+      this.http.get('https://ovgsoft.com/api/peluches.php')
           .subscribe( (resp: Producto[]) => {
             this.productos = resp;
             this.cargando = false;
@@ -37,7 +38,7 @@ export class ProductosService {
 
   getProducto( id: string ) {
 
-    return this.http.get(`https://dpeluche.com/api/dpelucheInicio.php?peluche=1`);
+    return this.http.get('https://ovgsoft.com/api/peluchesDetalle.php?id=' +id );
 
   }
 

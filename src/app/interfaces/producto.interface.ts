@@ -2,6 +2,9 @@ export interface Producto {
     descripcion: string;
     id: string;
     titulo: string;
-    url: string;
+    portada: string;
     precio: string;
+    detalles: any[];
+    multimedia: any[];
+
 }
