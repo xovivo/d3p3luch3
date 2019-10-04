@@ -38,8 +38,7 @@ export class ProductosService {
 
   getProducto( id: string ) {
 
-    return this.http.get('https://ovgsoft.com/api/peluchesDetalle.php?id=' +id );
-
+    return this.http.get('https://chofix-450a5.firebaseio.com/' + id );
   }
 
   buscarProducto( termino: string ) {

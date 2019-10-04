@@ -4,7 +4,7 @@ export interface Producto {
     titulo: string;
     portada: string;
     precio: string;
-    detalles: any[];
+    stock: string;
     multimedia: any[];
 
 }

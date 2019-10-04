@@ -3,7 +3,7 @@ export interface ProductoDescripcion {
   titulo: string;
   titular: string;
   id: string;
-  url: string;
+  portada: string;
   precio: string;
   peso: string;
 }
