@@ -18,10 +18,18 @@ export class ItemsService {
 
 
   getProducto( id: string ) {
+    return new Promise(  ( resolve, reject ) => {
 
-    return this.http.get(`https://dpeluche.com/api/dpelucheInicio.php?peluche=${ id }`);
-
+    this.http.get('https://ovgsoft.com/api/peluchesDetalle.php?id=' + id)
+          .subscribe( (resp: ProductoDescripcion[]) => {
+            this.productoDedc = resp;
+            console.log(resp);
+            this.cargando = false;
+            resolve();
+          });
+        });
   }
+
 
 
 }

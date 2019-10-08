@@ -1,8 +1,4 @@
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
-@import url(http://fonts.googleapis.com/css?family=Abel);
-
 body {
 	font-family: 'Roboto', sans-serif;
 	position: relative;
@@ -2542,18 +2538,18 @@ textarea {
 .contact-info .social-networks ul li a:hover {
 	color: #F44336;
 }
-/* lg */ 
+/* lg */
 @media (min-width: 1200px) {
 
 }
 
 /* md */
 @media (min-width: 992px) and (max-width: 1199px) {
- 
- 
+
+
 .usa{
 	margin-right: 0;
-} 
+}
 
 .shipping img{
 	width: 100%;
@@ -2571,17 +2567,17 @@ textarea {
 	width: 65px;
 }
 
-#cart_items .cart_info .cart_description h4, 
+#cart_items .cart_info .cart_description h4,
 #cart_items .cart_info .cart_description p{
 	text-align: center;
-} 
+}
 
 }
 
 
 /* sm */
 @media (min-width: 768px) and (max-width: 991px) {
-   
+
 .shop-menu ul li a{
 	padding-left: 0;
 }
@@ -2839,9 +2835,9 @@ ul.sub-menu{
 	text-align: center;
 }
 
-.btn-group.pull-right, 
-.footer-bottom .pull-left, 
-.footer-bottom .pull-right, 
+.btn-group.pull-right,
+.footer-bottom .pull-left,
+.footer-bottom .pull-right,
 .mainmenu.pull-left,
 .media.commnets .pull-left,
 .media-list .pull-left{

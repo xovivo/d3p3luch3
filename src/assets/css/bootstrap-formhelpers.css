@@ -238,7 +238,6 @@
 .bfh-flag-ZW {
   width: 16px;
   height: 14px;
-  background: url(../img/bootstrap-formhelpers-countries.flags.png) no-repeat;
 }
 
 .bfh-flag-AD:empty,
@@ -1660,7 +1659,6 @@
 .bfh-flag-ZAR {
   width: 16px;
   height: 14px;
-  background: url(../img/bootstrap-formhelpers-currencies.flags.png) no-repeat;
 }
 
 .bfh-flag-AUD:empty,
@@ -1881,7 +1879,6 @@
   width: 230px;
   height: 30px;
   text-indent: -9999px;
-  background-image: url(../img/bootstrap-formhelpers-googlefonts.png);
 }
 
 .bfh-googlefonts .bfh-selectbox-options a:focus {
@@ -1894,7 +1891,6 @@
 .bfh-googlefonts .bfh-selectbox-options .active > a,
 .bfh-googlefonts .bfh-selectbox-options .active > a:hover {
   background-color: transparent;
-  background-image: url(../img/bootstrap-formhelpers-googlefonts.png);
   background-repeat: no-repeat;
   outline: none;
   filter: none;

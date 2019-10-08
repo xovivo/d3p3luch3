@@ -1,61 +1,8 @@
-@font-face {
-    font-family: 'Abrade-Book';
-    src: url('../fonts/Abrade/Book/Abrade-Book.eot?#iefix') format('embedded-opentype'), url('../fonts/Abrade/Book/Abrade-Book.otf') format('opentype'), url('../fonts/Abrade/Book/Abrade-Book.woff') format('woff'), url('../fonts/Abrade/Book/Abrade-Book.ttf') format('truetype'), url('../fonts/Abrade/Book/Abrade-Book.svg#Abrade-Book') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Abrade-Medium';
-    src: url('../fonts/Abrade/Medium/Abrade-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Abrade/Medium/Abrade-Medium.otf') format('opentype'), url('../fonts/Abrade/Medium/Abrade-Medium.woff') format('woff'), url('../fonts/Abrade/Medium/Abrade-Medium.ttf') format('truetype'), url('../fonts/Abrade/Medium/Abrade-Medium.svg#Abrade-Medium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Abrade-Ultra';
-    src: url('../fonts/Abrade/Ultra/Abrade-Ultra.eot?#iefix') format('embedded-opentype'), url('../fonts/Abrade/Ultra/Abrade-Ultra.otf') format('opentype'), url('../fonts/Abrade/Ultra/Abrade-Ultra.woff') format('woff'), url('../fonts/Abrade/Ultra/Abrade-Ultra.ttf') format('truetype'), url('../fonts/Abrade/Ultra/Abrade-Ultra.svg#Abrade-Ultra') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Abrade-UltraItalic';
-    src: url('../fonts/Abrade/UltraItalic/Abrade-UltraItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Abrade/UltraItalic/Abrade-UltraItalic.otf') format('opentype'), url('../fonts/Abrade/UltraItalic/Abrade-UltraItalic.woff') format('woff'), url('../fonts/Abrade/UltraItalic/Abrade-UltraItalic.ttf') format('truetype'), url('../fonts/Abrade/UltraItalic/Abrade-UltraItalic.svg#Abrade-UltraItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-{
-    font-family: "Abrade-UltraItalic";
-}
-{
-    font-family: "Abrade-Ultra";
-}
-{
-    font-family: 'Oswald', sans-serif;
-}
-/** Vertical Alignment **/
-
-{
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-{
-    padding-left: 80px;
-    padding-right: 80px;
-}
-{
-    margin-left: 80px;
-    margin-right: 80px;
-}
-
-
-/** Decoration Navigation **/
 @media only screen and (min-width: 766px) {
 	.nav-primary li.deco-nav-collections ul.nav-cols {
 		width: 500px;
 	}
-	.nav-primary li.deco-nav-collections ul.nav-cols > li.level1, 
+	.nav-primary li.deco-nav-collections ul.nav-cols > li.level1,
 	.nav-primary li.deco-nav-collections ul.nav-cols ul.level1 li.level1 {
     width: 100%;
 	}
@@ -100,7 +47,7 @@
     left: 50%;
     margin-left: -175px;
     opacity: 0;
-    transition: opacity 0.8s; 
+    transition: opacity 0.8s;
 	border: 1px solid #888;
 	box-shadow:0px 5px 10px grey;
 }
@@ -132,7 +79,7 @@
 .cart-note {
 	text-align: left;
 	font-size: larger;
-    font-weight: bold; 
+    font-weight: bold;
 }
 /** End Cart Notice **/
 
@@ -222,7 +169,7 @@
 
 /**** Contact Us Page ****/
 .contact_container .content-wrap h6 {
-	color: #000;	
+	color: #000;
 }
 .content-wrap a.PrimaryCTA {
 	font-family: 'Abrade-UltraItalic' !important;
@@ -234,7 +181,7 @@ a.faq-link {
 	background: #e11a38;
 }
 a.faq-link:hover {
-	background: #666666 !important; 
+	background: #666666 !important;
 }
 @media only screen and (max-width: 766px) {
 	.black-text {
@@ -245,15 +192,15 @@ a.faq-link:hover {
 
 
 /**** FAQs Page ****/
-.faq { 
+.faq {
 	margin-left: 45px;
 }
-.CmsCatalog h3 { 
+.CmsCatalog h3 {
 	font-size: 20px;
 	font-family: 'Abrade-Ultra';
 }
-.CmsCatalog ul { 
-	list-style-type: disc; 
+.CmsCatalog ul {
+	list-style-type: disc;
 	list-style-position: inside;
 }
 /**** End FAQs Page ****/
@@ -454,30 +401,18 @@ body.category-team .category-description {
 	background-size:30% auto;
 }
 
-.filters .company-filter, 
+.filters .company-filter,
 .filters .date-filter {
 	position:relative;
 }
-.filters .company-filter:after, 
-.filters .date-filter:after {
-	position:absolute;
-	background-image: url('../images/select-arrow.png');
-	background-repeat:no-repeat;
-    background-size: 100% auto;
-    display: inline-block;
-    right: -4px;
-    top: 10px;
-    width: 25px;
-    height: 20px;
-    content:"";
-}
-.filters .company-filter select, 
+
+.filters .company-filter select,
 .filters .date-filter select {
 	background:none;
 	padding: 0 28px 0 10px;
-	height: 30px;	
+	height: 30px;
 }
-.grid > table td .input-text.page/*, 
+.grid > table td .input-text.page/*,
 input.input-text*/{
 	height: 30px;
 	padding: 0 20px 0 8px;
@@ -508,7 +443,7 @@ input.input-text*/{
     text-align: left;
     width: 100%;
 }
-.stock-wording-title h1, 
+.stock-wording-title h1,
 .stock-team-title h1	{
 	font-size: 36px;
     margin-bottom: 20px;
@@ -527,23 +462,23 @@ input.input-text*/{
     position: relative;
     right: -20px;
 }
-.plumtree-onlinedealer-index-index .scaffold-form .buttons-set button.button, 
+.plumtree-onlinedealer-index-index .scaffold-form .buttons-set button.button,
 .customer-account-changeforgotten .scaffold-form .buttons-set button.button {
     float: none;
 
 }
-.plumtree-onlinedealer-index-index .scaffold-form .buttons-set, 
+.plumtree-onlinedealer-index-index .scaffold-form .buttons-set,
 .customer-account-changeforgotten .scaffold-form .buttons-set{
 	text-align:left;
 	 margin: 10px 0;
 }
-.plumtree-onlinedealer-index-index p.required, 
+.plumtree-onlinedealer-index-index p.required,
 .customer-account-changeforgotten p.required {
    display: none;
 }
 
-.stock-cu-show-more-btn, 
-.stock-ce-show-more-btn, 
+.stock-cu-show-more-btn,
+.stock-ce-show-more-btn,
 .stock-cc-show-more-btn {
     background: #e11a38;
     color: #fff;
@@ -552,8 +487,8 @@ input.input-text*/{
     transition: all 0.5s ease 0s;
 	opacity:1;
 }
-.stock-cu-show-more-btn:hover, 
-.stock-ce-show-more-btn:hover, 
+.stock-cu-show-more-btn:hover,
+.stock-ce-show-more-btn:hover,
 .stock-cc-show-more-btn:hover {
     opacity:0.7;
     transition: all 0.5s ease 0s;
@@ -569,7 +504,7 @@ input.input-text*/{
 	padding-top: 25px !important;
 }
 .select-customization .product-collateral .toggle-tabs li > span {
-	line-height: 1.1em;	
+	line-height: 1.1em;
 	/*margin-bottom: 90px;*/
 }
 .select-customization .toggle-tabs {
@@ -595,7 +530,7 @@ input.input-text*/{
     font-family: "Oswald" !important;
     font-size: 14px;
     font-weight: normal;
-    margin-bottom: 2em; 
+    margin-bottom: 2em;
 }
 .customDescription:hover {
 	color: #6c6c6c;
@@ -672,7 +607,7 @@ input.input-text*/{
 		width: 30%;
 	}
 	.team-letters-font-decoration,
-	.stock-wording-title, 
+	.stock-wording-title,
 	.stock-team-title h1 {
 	padding-left: 0;
 }

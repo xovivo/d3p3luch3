@@ -2,25 +2,6 @@
 PLANTILLA
 =============================================*/
 var rutaOculta = $("#rutaOculta").val();
-// Herramienta TOOLTIP
-$('[data-toggle="tooltip"]').tooltip();
-$.ajax({
-url:rutaOculta+"ajax/plantilla.ajax.php",
-success:function(respuesta){
-var colorFondo = JSON.parse(respuesta).colorFondo;
-var colorTexto = JSON.parse(respuesta).colorTexto;
-var barraSuperior = JSON.parse(respuesta).barraSuperior;
-var textoSuperior = JSON.parse(respuesta).textoSuperior;
-
-$(".backColor, .backColor a").css({"background": colorFondo,
-"color": colorTexto})
-$(".barraSuperior, .barraSuperior a").css({"background": barraSuperior,
-"color": textoSuperior})
-}
-})
-/*=============================================
-CUADRÍCULA O LISTA
-=============================================*/
 var btnList = $(".btnList");
 var btnGrid = $(".btnGrid");
 for(var i = 0; i < btnList.length; i++){
@@ -96,7 +77,7 @@ $("#moduloOfertas").html(
 '<div class="jumbotron">'+
 	'<h1 class="text-center">Lo sentimos</h1>'+
 	'<h3 class="text-center">¡En estos momentos no hay ofertas disponibles!</h3>'+
-	
+
 '</div>'
 );
 }

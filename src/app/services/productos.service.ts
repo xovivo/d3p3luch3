@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Producto } from '../interfaces/producto.interface';
-import { ProductoDescripcion } from '../interfaces/producto-descripcion.interface';
 
 
 @Injectable({
@@ -11,13 +10,13 @@ export class ProductosService {
 
   cargando = true;
   productos: Producto[] = [];
-  productoDedc: ProductoDescripcion[] = [];
   productosFiltrado: Producto[] = [];
 
 
   constructor( private http: HttpClient ) {
 
     this.cargarProductos();
+
   }
 
 
@@ -25,7 +24,7 @@ export class ProductosService {
 
     return new Promise(  ( resolve, reject ) => {
 
-      this.http.get('https://ovgsoft.com/api/peluches.php')
+      this.http.get('http://ovgsoft.com/api/peluches.php')
           .subscribe( (resp: Producto[]) => {
             this.productos = resp;
             this.cargando = false;
@@ -38,7 +37,8 @@ export class ProductosService {
 
   getProducto( id: string ) {
 
-    return this.http.get('https://chofix-450a5.firebaseio.com/' + id );
+    return this.http.get(`https://chofix-450a5.firebaseio.com/productos/${ id }.json`);
+
   }
 
   buscarProducto( termino: string ) {
@@ -71,7 +71,7 @@ export class ProductosService {
 
       const tituloLower = prod.titulo.toLocaleLowerCase();
 
-      if ( prod.id.indexOf( termino ) >= 0 || tituloLower.indexOf( termino ) >= 0  ) {
+      if ( prod.categoria.indexOf( termino ) >= 0 || tituloLower.indexOf( termino ) >= 0  ) {
         this.productosFiltrado.push( prod );
       }
 

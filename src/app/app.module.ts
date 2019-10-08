@@ -27,6 +27,8 @@ import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { PaisComponent } from './pages/pais/pais.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { LoginComponent } from './formularios/login/login.component';
+import { RegistroComponent } from './formularios/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { environment } from '../environments/environment';
     DtemporadaComponent,
     CatalogosComponent,
     EmpresaComponent,
-    PoliticasComponent
+    PoliticasComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

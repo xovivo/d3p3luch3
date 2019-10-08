@@ -8,16 +8,18 @@ import { SearchComponent } from './pages/search/search.component';
 import { PaisesComponent } from './pages/paises/paises.component';
 import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
+import { InfoproductoComponent } from './pages/infoproducto/infoproducto.component';
 
 
 
 const app_routes: Routes = [
     { path: 'home', component: PortafolioComponent },
+    { path: 'productos', component: InfoproductoComponent },
     { path: 'about', component: AboutComponent },
     { path: 'categorias', component: CategoriasComponent },
     { path: 'politicas', component: PoliticasComponent },
     { path: 'paises', component: PaisesComponent },
-    { path: 'item/:id/:portada/:tituo', component: ItemComponent },
+    { path: 'item/:id', component: ItemComponent},
     { path: 'search/:termino', component: SearchComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
