@@ -1,0 +1,392 @@
+
+
+
+  <script src="../../../assets/js.chat/chat.js"></script>
+  <div class="col-md-10">
+
+
+  <div class="login"></div>
+
+  <div class="green-background"></div>
+  <div class="wrap">
+  <section id="mmModal" class="left">
+      <div class="profile chat-head">
+          <div class="usuarioactivo"></div>
+      </div>
+      <div class="contact-list selUs" id="contacts"></div>
+  </section>
+  <section id="mModal" class="right clasModamovil">
+      <div class="chat-head" >
+          <div class="chat-name" id="daUaerse">
+          <h1 class="font-name"></h1>
+          <p class="font-online"></p>
+      </div>
+          <i id="action_menu_btn" class="fa fa-bars fa-lg"></i>
+          <i class="fa fa-times fa-lg" aria-hidden="true" id="close-contact-information"></i>
+      </div>
+      <div class="wrap-chat">
+          <ul class="chat" id="chat"></ul>
+          <ul id="info" class="information action_menu"></ul>
+          <div class="information"></div>
+      </div>
+          <div class="wrap-message">
+              <div class="message">
+                  <input id="mjspost" type="text" class="input-message" placeholder="Escrib su mensaje..." />
+                  <button class="fa fa-paper-plane submit" id="post_mensaje"aria-hidden="true"></button>
+              </div>
+          </div>
+  </section>
+  </div>
+</div>
+<script>
+$('.chat').animate({
+scrollTop: $(document).height()
+}, 'slow');
+$(document).ready(function () {
+$('#action_menu_btn').click(function () {
+$('.action_menu').toggle();
+});
+$('#btn-salir').click(function () {
+$('.action_menu').toggle();
+});
+$('.showInformation').click(function () {
+$('.action_menu').toggle();
+  // $('#info').toggle();
+
+});
+});
+
+var btnLocalUs = $('#postnewUser');
+var selec = $('#selccion');
+var btnCrearlUs = $('#crearNewUser');
+var btnSalir = $('#btn-salir');
+var timeline = $('.selUs');
+var postear = $('#post_mensaje');
+var atras = $('#action_menu_bt');
+
+firebase.initializeApp(config);
+var database = firebase.database();
+if (firebase.auth()) {
+firebase.auth().onAuthStateChanged(function (user) {
+if (user) {
+  $('#chat').html('');
+  $('#mModal').removeClass('oculto');
+  $('#mmModal').removeClass('clasModamovil');
+  var nomUno = localStorage.getItem('nome');
+  var fotoUno = localStorage.getItem('fotto');
+  var idDoa = localStorage.getItem('iud');
+  var email = user.email;
+  localStorage.setItem('mail', email);
+  var codificado = btoa(email);
+  var firebaseOrdersCol = database.ref().child('conversas/' + codificado);
+  localStorage.setItem('idUs', codificado);
+var useMidata = database.ref().child('usuarios').child(codificado);
+  useMidata.on('value', function (use) {
+      var midata = use.val();
+      localStorage.setItem('mpic', midata.foto);
+      $('.usuarioactivo').html(`<img id="profile-img" src="` + midata.foto + `" class="online" />`);
+  });
+  timeline.on('click', 'li', function () {
+       $('#chat').html('');
+      $('#mModal').removeClass('clasModamovil');
+      $('#mmModal').addClass('clasModamovil');
+      let uId = $(this).data('iud');
+      let uIdFoto = $(this).data('fotto');
+      localStorage.setItem('nome', $(this).data('nome'));
+      localStorage.setItem('iud', $(this).data('iud'));
+      localStorage.setItem('fotto', $(this).data('fotto'));
+
+      firebaseOrdersCol.on('value', function (users) {
+
+      users.forEach(function (firebaseUsersReference) {
+      var users = firebaseUsersReference.val();
+      var datos = database.ref().child('mensagens/' + codificado + '/' + uId);
+
+      datos.on('value', function (dat) {
+      var displayData = '';
+
+      dat.forEach(function (fotDat) {
+      var a = fotDat.val();
+      if (localStorage.getItem('idUs') !== a.idUsuario) {
+           var datosUSe = `<img id="profile-img" src="${uIdFoto}" class="online" alt="" />
+               <p>${nomUno}</p>`;
+          $('#daUaerse').html(datosUSe);
+           displayData += `
+              <div class='chat-bubble me'>
+              <div class='imProfil'>
+              <img src="` + uIdFoto +`" /></div>
+                  <div class='my-mouth'></div>
+                  <h4>` + a.mensagem + `</h4>
+                  <div class='content'>` + nomUno + `</div>
+                  <div class='time'></div>
+              </div>`;
+                  }else {
+                  displayData += `
+              <div class='chat-bubble you'>
+              <div class='imProfil'><img src="` + localStorage.getItem('mpic') +`" /></div>
+
+                  <div class='your-mouth'></div>
+                  <h4>` + a.mensagem + `</h4>
+                  <div class='content'>` + nomUno + `</div>
+                  <div class='time'></div>
+              </div>`;
+                  }
+
+      $('#chat').html(displayData);
+      });
+   });
+});
+});
+});
+
+
+  var contactos = database.ref().child('conversas/' + codificado);
+  contactos.on('value', function (us) {
+      var imp = `<ul id="selUs">`;
+     var info = '';
+      us.forEach(function (fir) {
+          var u = fir.val();
+          imp += `<li class="contact" data-iud="${u.idDestinatario}" data-nome="${u.usuarioExibicao.nome}"
+          data-fotto="${u.usuarioExibicao.foto}">
+              <div class="contact-preview">
+                  <span class="contact-status online"></span>
+                  <img src="${u.usuarioExibicao.foto}" alt="" />
+                  <div class="contact-time">
+                      <p class="name">${u.usuarioExibicao.nome}</p>
+                      <p class="preview">${u.ultimaMensagem}.</p>
+                  </div>
+              </div>
+          </li>`;
+
+           info += `
+            <li class="contact" data-iud="${u.idDestinatario}" data-nome="${u.usuarioExibicao.nome}"data-fotto="${u.usuarioExibicao.foto}">
+              <div class="listGroups">
+              <img src="${u.usuarioExibicao.foto}">
+              <p>${u.usuarioExibicao.nome}</p>
+              </div>
+          </li>`;
+      });
+      imp += `</ul>`;
+      $('.contact-list').html(imp);
+       $('#info').html(info);
+  });
+
+
+
+}else{
+
+var loginn = ` <div>
+              <a class="hiddenanchor" id="signup"></a>
+              <a class="hiddenanchor" id="signin"></a>
+              <div id="back"></div>
+              <div class="login_wrapper">
+                  <div class="animate form login_form">
+                      <section class="login_content">
+                          <form>
+                              <img src="img/logo.png" style="width: 100%;">
+                              <h1>Login</h1>
+                              <div>
+                                  <input id="txtM" type="text" class="form-control" placeholder="Correo" required />
+                              </div>
+                              <div>
+                                  <input id="txtC" type="password" class="form-control" placeholder="Contraseña"
+                                  required />
+                              </div>
+                              <div>
+                                  <a class="btn btn-default submit" href="#" onClick="loginnn()">Entrar</a>
+                                  <a class="reset_pass" href="#">Olvidaste tu contraseña?</a>
+                              </div>
+                              <div class="clearfix"></div>
+                              <div class="separator">
+                                  <p class="change_link">
+                                      <a href="#signup" class="to_register"> Solicita un usuario </a>
+                                  </p>
+                                  <div class="clearfix"></div>
+                                  <br />
+                                  <div>
+                                      <h1><img src="img/favicon.ico" style="width: 20%;"></h1>
+                                      <p>©2019</p>
+                                  </div>
+                              </div>
+                          </form>
+                      </section>
+                  </div>
+                  <div id="register" class="animate form registration_form">
+                      <section class="login_content">
+                          <form>
+                              <img src="img/logo.png" style="width: 100%;">
+                              <h2>Login</h2>
+                              <div>
+                                  <input type="text" class="form-control" placeholder="Nombre" required="" />
+                              </div>
+                              <div>
+                                  <input type="email" class="form-control" placeholder="Correo" required="" />
+                              </div>
+                              <div>
+                                  <input type="password" class="form-control" placeholder="Contraseña" required="" />
+                              </div>
+                              <div>
+                                  <a class="btn btn-default submit" href="#">Enviar</a>
+                              </div>
+                              <div class="clearfix"></div>
+                              <div class="separator">
+                                  <p class="change_link">
+                                      <a href="#signin" class="to_register"> Atras </a>
+                                  </p>
+                                  <div class="clearfix"></div>
+                                  <br />
+                                  <div>
+                                      <h1><img src="img/favicon.ico" style="width: 20%;"></h1>
+                                      <p>©2019 All Rights Reserved.</p>
+                                  </div>
+                              </div>
+                          </form>
+                      </section>
+                  </div>
+              </div>
+          </div>`;
+          $('.login').html(loginn);
+
+  $('#mModal').addClass('oculto');
+  $('#mmModal').addClass('oculto');
+
+}
+
+postear.on('click', function() {
+
+var useFoto = database.ref().child('usuarios').child(localStorage.getItem('iud'));
+var useMidata = database.ref().child('usuarios').child(codificado);
+
+useFoto.on('value', function (users) {
+useMidata.on('value', function (use) {
+
+
+var pic = users.val();
+var midata = use.val();
+let mjs =  $('#mjspost').val();
+if ($.trim(mjs) === '') {
+ swal({
+ type: "error",
+ title: "¡Debe escribir un mensaje!",
+ showConfirmButton: true,
+ confirmButtonText: "Cerrar"
+ }).then(function(result){
+ if (result.value) {
+
+//    window.location = "index.html";
+
+ }
+ })
+ return true;
+}
+localStorage.setItem('miFoto', midata.foto);
+
+var  usuarioexibicao = {
+  email:pic.email,
+  foto:pic.foto,
+  nome:pic.nome,
+}
+var convers = {
+idDestinatario: localStorage.getItem('iud'),
+idRemetente: codificado,
+isGroup: 'false',
+ultimaMensagem: mjs,
+usuarioExibicao: usuarioexibicao,
+}
+
+var menDat = {
+idUsuario: codificado,
+mensagem: mjs,
+nome: usuarioexibicao.nome,
+}
+
+
+var cont2 = database.ref().child('mensagens').child(localStorage.getItem('iud')).child(codificado);
+var cont3 = database.ref().child('mensagens').child(codificado).child(localStorage.getItem('iud'));
+cont2.push(menDat);
+cont3.push(menDat);
+
+
+
+var contt = database.ref().child('conversas').child(localStorage.getItem('iud')).child(codificado);
+var cont = database.ref().child('conversas').child(codificado).child(localStorage.getItem('iud'));
+cont.set(convers);
+contt.set(convers);
+$('#mjspost').val('');
+});
+});
+
+});
+
+
+
+});
+} else {
+var logUsuario = localStorage.removeItem('logUsMail');
+$('#modalChat').addClass('oculto');
+$('#loginModal').removeClass('oculto');
+$('#regisModal').addClass('oculto');
+$('#contactoss').addClass('oculto');
+}
+function loginnn() {
+let mai = $('#txtM').val();
+let pas = $('#txtC').val();
+localStorage.setItem('logUsMail', mai);
+loginFire(mai, pas);
+};
+btnCrearlUs.on('click', function () {
+let nom = $('#txtN').val();
+let mai = $('#txtM').val();
+let pas = $('#txtC').val();
+localStorage.setItem('logUs', nom);
+localStorage.setItem('logUsMail', mai);
+localStorage.setItem('logUsPas', pas);
+creArUs(nom, mai, pas);
+});
+function loginFire(mai, pas) {
+firebase.auth().signInWithEmailAndPassword(mai, pas).then(function () {
+window.location.href = "index.html";
+}).catch(function (error) {
+console.log(error);
+});
+}
+function creArUs(nom, mai, pas) {
+firebase.auth().createUserWithEmailAndPassword(mai, pas)
+.catch(function (error) {
+  var errorCode = error.code;
+  var errorMessage = error.message;
+});
+var users = {
+nome: nom,
+email: mai,
+foto: 'avatar.png',
+};
+firebaseOrdersCol.push(users);
+}
+btnSalir.on('click', function () {
+firebase.auth().signOut();
+var logUsuario = localStorage.removeItem('logUsMail');
+window.location.href = "index.html";
+});
+var btnAnonimo = $('#anonimo');
+btnAnonimo.on('click', function () {
+firebase.auth().signInAnonymously().catch(function (error) {
+var errorCode = error.code;
+var errorMessage = error.message;
+});
+firebase.auth().onAuthStateChanged(function (user) {
+if (user) {
+  var isAnonymous = user.isAnonymous;
+  var uid = user.uid;
+  $('#modalChat').removeClass('oculto');
+  $('#loginModal').addClass('oculto');
+  $('#regisModal').addClass('oculto');
+  $('#contactoss').removeClass('oculto');
+
+} else {}
+});
+});
+
+
+
+</script>

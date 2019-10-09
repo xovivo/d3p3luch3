@@ -29,6 +29,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './formularios/login/login.component';
 import { RegistroComponent } from './formularios/registro/registro.component';
+import { MensajesComponent } from './pages/mensajes/mensajes.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { RegistroComponent } from './formularios/registro/registro.component';
     EmpresaComponent,
     PoliticasComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    MensajesComponent
   ],
   imports: [
     BrowserModule,

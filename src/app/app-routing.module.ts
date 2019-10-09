@@ -9,6 +9,7 @@ import { PaisesComponent } from './pages/paises/paises.component';
 import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { InfoproductoComponent } from './pages/infoproducto/infoproducto.component';
+import { MensajesComponent } from './pages/mensajes/mensajes.component';
 
 
 
@@ -21,6 +22,7 @@ const app_routes: Routes = [
     { path: 'paises', component: PaisesComponent },
     { path: 'item/:id', component: ItemComponent},
     { path: 'search/:termino', component: SearchComponent },
+    { path: 'chat', component: MensajesComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
