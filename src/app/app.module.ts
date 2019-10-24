@@ -6,6 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -15,7 +17,6 @@ import { ItemComponent } from './pages/item/item.component';
 import { SearchComponent } from './pages/search/search.component';
 import { PaisesComponent } from './pages/paises/paises.component';
 import { InfoproductoComponent } from './pages/infoproducto/infoproducto.component';
-import { CarritoComponent } from './pages/carrito/carrito.component';
 import { PedidoComponent } from './pages/pedido/pedido.component';
 import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { DtemporadaComponent } from './pages/dtemporada/dtemporada.component';
@@ -27,10 +28,10 @@ import { PaisComponent } from './pages/pais/pais.component';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './formularios/login/login.component';
 import { RegistroComponent } from './formularios/registro/registro.component';
-import { MensajesComponent } from './pages/mensajes/mensajes.component';
 import { FormsModule } from '@angular/forms';
-
-
+// servicios
+import { ChatService } from './providers/chat.service';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,8 +52,7 @@ import { FormsModule } from '@angular/forms';
     EmpresaComponent,
     PoliticasComponent,
     LoginComponent,
-    RegistroComponent,
-    MensajesComponent
+    RegistroComponent
     ],
   imports: [
     BrowserModule,
@@ -60,9 +60,13 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     HttpClientModule,
     AngularFireModule,
-    AngularFireModule.initializeApp(environment)// , ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    AngularFireModule.initializeApp(environment),
+    AngularFirestoreModule,
+    AngularFireAuthModule// , ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [
+    ChatService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
