@@ -263,6 +263,9 @@ If the Work includes a "NOTICE" text file as part of its distribution, then any 
 END OF TERMS AND CONDITIONS
 
 
+@angular/core
+MIT
+
 @angular/common
 MIT
 
@@ -329,6 +332,9 @@ MIT
 MIT
 
 @angular/forms
+MIT
+
+@angular/service-worker
 MIT
 
 @firebase/auth
@@ -538,9 +544,6 @@ Apache-2.0
 
 
 firebase/auth
-
-@angular/core
-MIT
 
 firebase/firestore
 
