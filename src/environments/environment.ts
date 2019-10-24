@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-    production: true,
+    production: newFunction(),
+    firebase: {
     apiKey: 'AIzaSyCxhaBmaCNfquvo3Ardar_cShtjPfFzuHU',
     authDomain: 'sirenalive-5438a.firebaseapp.com',
     databaseURL: 'https://sirenalive-5438a.firebaseio.com',
@@ -12,9 +13,13 @@ export const environment = {
     messagingSenderId: '791970059126',
     appId: '1:791970059126:web:12d166e983a3b913476057',
     measurementId: 'G-PB4VHFJHP8'
-
+    }
 };
 
+
+function newFunction() {
+  return true;
+}
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

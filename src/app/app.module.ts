@@ -5,9 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -30,8 +27,6 @@ import { LoginComponent } from './formularios/login/login.component';
 import { RegistroComponent } from './formularios/registro/registro.component';
 import { FormsModule } from '@angular/forms';
 // servicios
-import { ChatService } from './providers/chat.service';
-import { CarritoComponent } from './pages/carrito/carrito.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +39,6 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
     PaisesComponent,
     PaisComponent,
     InfoproductoComponent,
-    CarritoComponent,
     PedidoComponent,
     CategoriasComponent,
     DtemporadaComponent,
@@ -59,14 +53,9 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    AngularFireModule,
-    AngularFireModule.initializeApp(environment),
-    AngularFirestoreModule,
-    AngularFireAuthModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
-    ChatService
   ],
   bootstrap: [AppComponent]
 })

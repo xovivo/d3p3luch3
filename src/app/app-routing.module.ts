@@ -11,7 +11,6 @@ import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { InfoproductoComponent } from './pages/infoproducto/infoproducto.component';
 import { LoginComponent } from './formularios/login/login.component';
 import { RegistroComponent } from './formularios/registro/registro.component';
-import { CarritoComponent } from './pages/carrito/carrito.component';
 
 
 
@@ -24,7 +23,6 @@ const app_routes: Routes = [
     { path: 'categorias', component: CategoriasComponent },
     { path: 'politicas', component: PoliticasComponent },
     { path: 'paises', component: PaisesComponent },
-    { path: 'chat', component: CarritoComponent },
     { path: 'item/:id_pel', component: ItemComponent},
     { path: 'categoria/:id', component: InfoproductoComponent},
     { path: 'search/:termino', component: SearchComponent },

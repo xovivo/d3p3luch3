@@ -6,7 +6,6 @@ import { UsuarioModel } from '../../models/usuario.model';
 import { AuthService } from '../../services/auth.service';
 
 import Swal from 'sweetalert2';
-import { ChatService } from 'src/app/providers/chat.service';
 
 @Component({
   selector: 'app-login',
@@ -19,8 +18,7 @@ export class LoginComponent implements OnInit {
   recordarme = false;
 
   constructor( private auth: AuthService,
-               private router: Router,
-               public _cs: ChatService ) { }
+               private router: Router ) { }
 
   ngOnInit() {
 
@@ -31,11 +29,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  ingresar( proveedor: string ){
 
-    this._cs.login( proveedor );
-
-  }
 
   login( form: NgForm ) {
 
@@ -59,7 +53,6 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('email', this.usuario.email);
         }
 
-          this.ingresar(this.usuario.nombre);
         this.router.navigateByUrl('/chat');
 
       }, (err) => {

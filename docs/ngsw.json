@@ -1,12 +1,20 @@
 {
   "configVersion": 1,
-  "index": "/./index.html",
+  "index": "/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
-      "urls": [],
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.4487eae2c49e7fd8e08d.js",
+        "/manifest.json",
+        "/polyfills.20ab2d163684112c2aba.js",
+        "/runtime.ec2944dd8b20ec099bf3.js",
+        "/styles.0e4338761429b4eb16ac.css"
+      ],
       "patterns": [
         "https:\\/\\/stackpath\\.bootstrapcdn\\.com\\/.*"
       ]
@@ -2081,7 +2089,14 @@
     "/assets/js/ventas.js": "70d2f8e98b8bea9d7ab43e2ea32b4e98967dd861",
     "/assets/js/visitas.js": "3989590e22576a995a20a5c5098c70281aaf6f29",
     "/assets/js/w.js": "23d78dfae1f2337a9565e2ce5391141641c77dcf",
-    "/assets/js/window_effects.js": "a7f1dd0a76b34a11b5fca8e1a5e209dafdb1dcb4"
+    "/assets/js/window_effects.js": "a7f1dd0a76b34a11b5fca8e1a5e209dafdb1dcb4",
+    "/favicon.ico": "90f882f97ece567afc4eb3b5caf32125d33656ba",
+    "/index.html": "32f813b9c1d6484bbf7cdf7cfabc0af7428474b9",
+    "/main.4487eae2c49e7fd8e08d.js": "1e96d561cd4a325a6edfb7237f10e9c5d44112fb",
+    "/manifest.json": "12851aa4e0dc17575c6e1009a522e1688b36c9fb",
+    "/polyfills.20ab2d163684112c2aba.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
+    "/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/styles.0e4338761429b4eb16ac.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
   "navigationUrls": [
     {
