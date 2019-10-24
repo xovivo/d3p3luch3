@@ -24,7 +24,7 @@ import { CatalogosComponent } from './pages/catalogos/catalogos.component';
 import { EmpresaComponent } from './pages/empresa/empresa.component';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { PaisComponent } from './pages/pais/pais.component';
-// import { ServiceWorkerModule } from '@angular/service-worker';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './formularios/login/login.component';
 import { RegistroComponent } from './formularios/registro/registro.component';
@@ -62,7 +62,8 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
     AngularFireModule,
     AngularFireModule.initializeApp(environment),
     AngularFirestoreModule,
-    AngularFireAuthModule// , ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    AngularFireAuthModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     ChatService
