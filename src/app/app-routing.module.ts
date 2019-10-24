@@ -10,19 +10,24 @@ import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { InfoproductoComponent } from './pages/infoproducto/infoproducto.component';
 import { MensajesComponent } from './pages/mensajes/mensajes.component';
+import { LoginComponent } from './formularios/login/login.component';
+import { RegistroComponent } from './formularios/registro/registro.component';
 
 
 
 const app_routes: Routes = [
     { path: 'home', component: PortafolioComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'registro', component: RegistroComponent },
     { path: 'productos', component: InfoproductoComponent },
     { path: 'about', component: AboutComponent },
     { path: 'categorias', component: CategoriasComponent },
     { path: 'politicas', component: PoliticasComponent },
     { path: 'paises', component: PaisesComponent },
-    { path: 'item/:id', component: ItemComponent},
-    { path: 'search/:termino', component: SearchComponent },
     { path: 'chat', component: MensajesComponent },
+    { path: 'item/:id_pel', component: ItemComponent},
+    { path: 'categoria/:id', component: InfoproductoComponent},
+    { path: 'search/:termino', component: SearchComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

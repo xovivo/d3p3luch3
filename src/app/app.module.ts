@@ -5,9 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
-
-
-
+import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -25,11 +23,13 @@ import { CatalogosComponent } from './pages/catalogos/catalogos.component';
 import { EmpresaComponent } from './pages/empresa/empresa.component';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { PaisComponent } from './pages/pais/pais.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
+// import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './formularios/login/login.component';
 import { RegistroComponent } from './formularios/registro/registro.component';
 import { MensajesComponent } from './pages/mensajes/mensajes.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -53,12 +53,14 @@ import { MensajesComponent } from './pages/mensajes/mensajes.component';
     LoginComponent,
     RegistroComponent,
     MensajesComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    AngularFireModule,
+    AngularFireModule.initializeApp(environment)// , ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

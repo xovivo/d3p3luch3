@@ -8,17 +8,29 @@
                       </span>
                   </div>
               </figure>
-              <div class="quick-access hidden-lg hidden-md">
+
+              <div class="quick-access hidden-md hidden-lg">
                   <ul class="top-links">
                       <li class="link-search">
                           <a href="javascript:void(0);">
                               <span class="icon-magnifying-glass"></span>
                               <span class="link-label">Buscar</span>
                           </a>
+
+
+
                           <form id="search_mini_form" class="input-group search-bar cntr">
                               <div class="input-box cntr-innr">
-                                  <label for="search">Buscar:</label>
-                                  <input name="search" placeholder="Buscar.." id="q" class="form-control input-group " onkeyup="load(1);">
+                                  <label for="urku-search">
+                                      <svg>
+                                        <use xlink:href="assets/img/symbols.svg#icon-search"></use>
+                                      </svg>
+                                    </label>
+                                  <input (keyup.enter)="buscarProducto( txtBuscar.value )"
+                                  placeholder="Buscar..."
+                                  id="urku-search"
+                                  class="rk-search-field"
+                                  #txtBuscar>
                                   <span id="loader"></span>
                               </div>
                               <div id="search_autocomplete" class="search-autocomplete"></div>
@@ -56,11 +68,6 @@
                         </li>
                       </ol>
                       <ol class="nav-primary cms-nav">
-                        <li class="level0 nav-collections parent" outerLinkActive="active">
-                          <a class="level0 has-children" routerLink="dtemporada" style="padding-left: 9.27778px; padding-right: 9.27778px;">DE TEMPORADA</a>
-                        </li>
-                      </ol>
-                      <ol class="nav-primary cms-nav">
                         <li routerLinkActive="active" class="level0 nav-collections parent">
                           <a class="level0 has-children" routerLink="catalogos" style="padding-left: 9.27778px; padding-right: 9.27778px;">CATALOGOS</a>
                         </li>
@@ -93,18 +100,49 @@
                         </li>
                       </ol>
                       <ol class="nav-primary cms-nav">
-                        <li class="level0 nav-collections parent" outerLinkActive="active">
-                          <a class="level0 has-children" routerLink="chat"
+                        <li class="level0 nav-collections parent">
+                          <a class="level0 has-children" routerLink=""
                             style="padding-left: 9.27778px; padding-right: 9.27778px;">Chat</a>
                         </li>
                       </ol>
                       <ol class="nav-primary cms-nav">
                         <li class="level0 nav-collections parent" outerLinkActive="login">
-                          <a class="level0 has-children" routerLink="rpductos"
+                          <a class="level0 has-children" routerLink="login"
                             style="padding-left: 9.27778px; padding-right: 9.27778px;">Quiero ser mayorista</a>
                         </li>
                       </ol>
+                      <ol class="nav-primary cms-nav">
+                          <li class="level0 nav-collections parent" outerLinkActive="login">
+                              <button class="btn btn-outline-danger"
+                              (click)="salir()">
+                        Salir
+                      </button>
+
+                          </li>
+                        </ol>
+                        <ol class="nav-primary cms-nav">
+                                    <li class="submenu level0 nav-collections parent"><a href="#"><i class="fa fa-shopping-bag" id="img-carrito" style="font-size: 20px;"></i></a>
+                                            <div id="carrito">
+
+                                                    <table class="u-full-width">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Imagen</th>
+                                                                <th>Nombre</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="lista" ></tbody>
+                                                    </table>
+
+                                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                            </div>
+                                    </li>
+
+
+                        </ol>
                       <div class="navPaddingTotal"></div>
                   </nav>
               </div>
           </div>
+

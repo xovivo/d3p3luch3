@@ -4,13 +4,14 @@
 
 export const environment = {
     production: true,
-    apiKey: 'AIzaSyA5OjfhgQnATJl7sC83oRKh-5JU-61Fd3c',
-    authDomain: 'tequila-65ab6.firebaseapp.com',
-    databaseURL: 'https://tequila-65ab6.firebaseio.com',
-    projectId: 'tequila-65ab6',
-    storageBucket: 'tequila-65ab6.appspot.com',
-    messagingSenderId: '452276295482',
-    appId: '1:452276295482:web:cffef90e4cf4f342'
+    apiKey: 'AIzaSyCxhaBmaCNfquvo3Ardar_cShtjPfFzuHU',
+    authDomain: 'sirenalive-5438a.firebaseapp.com',
+    databaseURL: 'https://sirenalive-5438a.firebaseio.com',
+    projectId: 'sirenalive-5438a',
+    storageBucket: 'sirenalive-5438a.appspot.com',
+    messagingSenderId: '791970059126',
+    appId: '1:791970059126:web:12d166e983a3b913476057',
+    measurementId: 'G-PB4VHFJHP8'
 
 };
 

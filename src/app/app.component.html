@@ -5,7 +5,7 @@
 </header>
 <hr class="separa">
 
-<main class="container">
+<main class="container-fluid">
 
 
       <div id="manCategoria" class="col-lg-2 col-md-2 novisible" style="padding: 0 20px 0 0px">
@@ -24,12 +24,12 @@
 
                         <ul class="menu-categorias sdcollections-list">
                           <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'obejas' ]" class="site-nav__link">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                        <img src="https://ovgsoft.com/api/ICONOS/oveja.svg" style="width: 60px;"
+                                        <img src="https://ovgsoft.com/api/ICONOS/oveja.svg" style="width: 30px;"
                                         alt="https://ovgsoft.com/api/ICONOS/oveja.svg">
                                          Oveja
 
@@ -39,13 +39,13 @@
                             </a>
                           </li>
                           <li style="width: 100%" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'caballo' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/caballo.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/caballo.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/caballo.svg">
                                     Caballo
                                   </div>
@@ -54,13 +54,13 @@
                             </a>
                           </li>
                           <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'changos' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/gorila.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/gorila.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/gorila.svg">
                                     Changos
                                   </div>
@@ -70,31 +70,30 @@
                           </li>
                           <li
                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'conejo' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
-                              <div class="element-main">
-                                <div
-                                  class="collection-area have-icons blank-featured-img">
+                                <div class="element-main">
+                                  <div  class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/conejo.svg" style="width: 10%;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/conejo.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/conejo.svg">
                                     Conejo
                                   </div>
                                 </div>
-                              </div>
+                                </div>
                             </a>
                           </li>
                           <li
                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'elefante' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div
                                   class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/elefante.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/elefante.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/elefante.svg">
                                     Elefante
                                   </div>
@@ -104,14 +103,14 @@
                           </li>
                           <li
                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'felino' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div
                                   class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/tiger.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/tiger.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/tigre.svg">
                                     Felinos
                                   </div>
@@ -121,14 +120,14 @@
                           </li>
                           <li
                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'jirafa' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div
                                   class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/jirafa.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/jirafa.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/jirafa.svg">
                                     Jirafa
                                   </div>
@@ -138,14 +137,14 @@
                           </li>
                           <li
                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'leon' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div
                                   class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/leon.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/leon.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/leon.svg">
                                     Leon
                                   </div>
@@ -155,14 +154,14 @@
                           </li>
                           <li
                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'oso' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div
                                   class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/oso.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/oso.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/Oso.svg">
                                     Oso
                                   </div>
@@ -171,14 +170,14 @@
                             </a>
                           </li>
                           <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'panda' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div
                                   class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/panda.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/panda.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/panda.svg">
                                     Panda
                                   </div>
@@ -187,14 +186,14 @@
                             </a>
                           </li>
                           <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'koala' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div
                                   class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/koala.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/koala.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/koala.svg">
                                     Koala
                                   </div>
@@ -203,14 +202,14 @@
                             </a>
                           </li>
                           <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'perros' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div
                                   class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/perro.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/perro.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/perros.svg">
                                     Perros
                                   </div>
@@ -226,7 +225,7 @@
                                 <div
                                   class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/conejo.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/conejo.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/conejo.svg">
                                     Cojejo
                                   </div>
@@ -236,13 +235,13 @@
                           </li>
                           <li
                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'marino' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/marinos.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/marinos.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/marinos.svg">
                                     Marino
                                   </div>
@@ -252,13 +251,13 @@
                           </li>
                           <li
                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'hipopotamo' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/hippopotamo.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/hippopotamo.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/hippopotamo.svg">
                                     Hippopotamo
                                   </div>
@@ -267,14 +266,14 @@
                             </a>
                           </li>
                           <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children sdc-element vetical-menu1 site-nav--has-dropdown">
-                            <a href="#" class="site-nav__link">
+                            <a [routerLink]="['/categoria', 'unicornio' ]" class="site-nav__link">
                               <img src="#" class="blank-featured-img" alt="">
                               <div style="clear: both;"></div>
                               <div class="element-main">
                                 <div
                                   class="collection-area have-icons blank-featured-img">
                                   <div class="collection-name">
-                                    <img src="https://ovgsoft.com/api/ICONOS/unicornio.svg" style="width: 60px;"
+                                    <img src="https://ovgsoft.com/api/ICONOS/unicornio.svg" style="width: 30px;"
                                       alt="https://ovgsoft.com/api/ICONOS/unicornio.svg">
                                     Unicornios
 
@@ -323,39 +322,11 @@
 
 
   <router-outlet></router-outlet>
-  </main>
+
+</main>
   <footer id="footer">
 
       <app-footer></app-footer>
 
 </footer>
 
-
-
-<a class="fixed-action-btn direction-top ">
-  <div class="btn-floating btn-large white">
-      <i class="icon-whatsapp"></i>
-  </div>
-  </a>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.fixed-action-btn');
-      var instances = M.FloatingActionButton.init(elems, {
-        direction: 'top',
-        hoverEnabled: false
-      });
-    });
-
-
-
-  $(window).on("load", function () {
-  localStorage.setItem("n", $('#n').val());
-  localStorage.setItem("f", $('#f').val());
-  localStorage.setItem("e", $('#e').val());
-
-
-
-
-  });
-
-  </script>

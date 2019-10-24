@@ -1,6 +1,6 @@
 export interface Producto {
     descripcion: string;
-    id: string;
+    id_pel: string;
     titulo: string;
     portada: string;
     precio: string;

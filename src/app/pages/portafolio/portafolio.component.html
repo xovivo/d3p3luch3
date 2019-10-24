@@ -1,153 +1,134 @@
-<!-- 1 -->
+
+<div class="col-md-10">
+
+<app-dtemporada></app-dtemporada>
+
+</div>
+<!--=====================================
+ VITRINA DE PRODUCTOS GRATIS
+======================================-->
+<div class="col-md-10">
+
+
+<div class="container-fluid">
+
+	<div class="container">
+
+		<div class="row">
+
+			<!--=====================================
+			BARRA TÍTULO
+			======================================-->
+
+			<div class="col-xs-12 tituloDestacado">
+
+				<!--===============================================-->
+
+				<div class="col-sm-6 col-xs-12">
+
+          <h1><small>PELUCHES MAS VENDIDOS </small></h1>
+
+				</div>
+
+        <hr>
+				<!--===============================================-->
+
+				<div class="col-sm-6 col-xs-12">
+
+					<a id="oscar" href="articulos-gratis">
+
+						<button class="btn btn-default backColor pull-right">
+
+							VER MÁS <span class="fa fa-chevron-right"></span>
+
+						</button>
+
+					</a>
+
+				</div>
+
+				<!--===============================================-->
+
+			</div>
+
+			<div class="clearfix"></div>
+
+			<hr>
 
 
 
-      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-        <div class="container-fluid" id="slide">
-          <div class="row">
-            <ul style="width: 600%;">
-              <li style="width: 16.6667%;">
-                <img src="https://dpeluche.com/backend/vistas/img/slide/slide1/fondo.jpg" alt="https://dpeluche.com/backend/vistas/img/slide/slide1/fondo.jpg">
-                  <div class="slideOpciones slideOpcion1">
-                    <div class="textosSlide" style="top:0%; left:0%; width:0%; right:0%">
-                      <h1 style="color:#333"></h1>
-                      <h2 style="color:#777"></h2>
-                      <h3 style="color:#888"></h3>
-                    <a href="#https://dpeluche.com/inicio">
-                      <button class="btn btn-default backColor text-uppercase" style="background: rgb(255, 0, 0); color: rgb(255, 255, 255);">
-                        CREAR CUENTA <span class="fa fa-chevron-right"></span>
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <ol id="paginacion">
-              <li item="1"><span class="fa fa-circle"></span></li>
-            </ol>
-          </div>
-        </div>
-
-
-        <div class="ae-masonry-xs2 ae-masonry-md-2 ae-masonry-xl-2">
-            <a href="https://dpeluche.com/sin-categoria" class="rk-item ae-masonry__item">
-            <img alt="sin-categoria" src="https://dpeluche.com/backend/vistas/img/banner/545978590a984.jpeg.jpg">
-              <div class="item-meta">
-                <h2>sin-categoria</h2>
-                <p>sin-categoria</p>
-              </div>
-            </a>
-          </div>
+		<!--=====================================
+		VITRINA DE PRODUCTOS EN CUADRÍCULA
+    ======================================-->
 
 
 
-<br><br>
-
-
-        <div class="container-fluid" >
 
 
 
-              <!--=====================================
-              VITRINA DE PRODUCTOS EN CUADRÍCULA
-              ======================================-->
-
-              <ul class="grid1" *ngIf="!productosService.cargando">
-
-                <!-- Producto 1 -->
-
-                <li *ngFor="let producto of productosService.productos" style="padding: 10px; margin:20px; " class="col-md-3 col-sm-6 col-xs-12 img-thumbnail">
-
-                  <!--===============================================-->
-                  <hr>
-                  <p class="medidass"><span class="medidaNums">{{ producto.stock }} cm</span></p>
-                  <p class="medidas"><span class="medidaNum">{{ producto.stock }} cm</span></p>
-                  <hr>
-                  <figure [routerLink]="['/item', producto.id]">
-                      <a [routerLink]="['/item', producto.id]" class="pixelProducto">
-                      <img src="https://dpeluche.com/backend/{{ producto.portada }}" alt="https://dpeluche.com/backend/{{ producto.portada }}" class="img-responsive">
-                      </a>
-                  </figure>
-                  <!--===============================================-->
-                  <br>
-                  <hr>
-                  <h4>
 
 
 
-                      <a href="#" class="pixelProducto">
-
-                          {{ producto.titulo }} <br>
-
-                      </a>
 
 
+		<ul *ngIf="!productosService.cargando" >
 
-                  </h4>
+			<!-- Producto 1 -->
 
-                  <!--===============================================-->
-
-                  <div class="col-xs-10 precio">
-
-                    <h2>
+			<li *ngFor="let producto of productosService.productos" class="col-md-4 col-sm-2 col-lg-4">
 
 
-                        <strong> $ {{ producto.precio }}</strong>
+
+				<figure  style="padding: 10px; margin: 10px !important; max-height: 200px;" >
+
+					<a [routerLink]="['/item', producto.id_pel ]"  class="pixelProducto">
+            <p class="medidass" style="zoom: 0.7;"><span class="medidaNums">{{ producto.stock }} cm</span></p>
+              <p class="medidas" style="zoom: 0.7;"><span class="medidaNum">{{ producto.stock }} cm</span></p>
+
+						<img src="https://ovgsoft.com/DpelucheWeb/{{ producto.portada }}" class="img-responsive">
+
+					</a>
+
+				</figure>
+
+				<!--===============================================-->
+
+				<h4>
+
+          {{ producto.titulo }}
 
 
-                    </h2>
-                    <p>
+				</h4>
 
-                   {{ producto.descripcion }}
+				<!--===============================================-->
 
+				<div class="col-xs-6">
 
-                    </p>
-                  </div>
+          <h4>
 
-                  <!--===============================================-->
-
-                  <div class="col-sm-2 enlaces">
-
-                    <div class="btn-group pull-right">
-
-                      <button type="button" style="margin: 5px;"  class="btn btn-default btn-xs deseos"  data-toggle="tooltip" title="Agregar a mi lista de deseos">
-
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-
-                      </button>
-
-                      <button type="button" style="margin: 5px;"  class="btn btn-danger btn-xs agregarCarrito" imagen="http://localhost/backend/vistas/img/productos/cursos/curso05.jpg"   data-toggle="tooltip" title="Agregar al carrito de compras">
-
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-
-                      </button>
-
-                      <a href="#" class="pixelProducto">
-
-                        <button type="button" style="margin: 5px;"  class="btn btn-warning btn-xs" data-toggle="tooltip" title="Ver producto">
-
-                          <i class="fa fa-eye" aria-hidden="true"></i>
-
-                        </button>
-
-                      </a>
-
-                    </div>
-
-                  </div>
-
-                </li>
-
-              </ul>
-
-              <!--=====================================
-              VITRINA DE PRODUCTOS EN LISTA
-              ======================================-->
+          $ {{ producto.precio }}
 
 
-            </div>
+          </h4>
+				</div>
+				<!--========================  =======================-->
 
 
-      </div>
+      </li>
+
+<hr>
+<br>
 
 
+		</ul>
+		<!--=====================================
+		VITRINA DE PRODUCTOS EN LISTA
+		======================================-->
+		</div>
+
+	</div>
+
+</div>
+
+
+</div>

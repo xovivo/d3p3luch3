@@ -1,6 +1,14 @@
 /*=============================================
 CARRUSEL
 =============================================*/
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.fixed-action-btn');
+  var instances = M.FloatingActionButton.init(elems, {
+    direction: 'top',
+    hoverEnabled: false
+  });
+});
+
 
 $(".flexslider").flexslider({
 
@@ -25,29 +33,29 @@ $(".flexslider ul li img").click(function(){
 // /*=============================================
 // EFECTO LUPA
 // =============================================*/
-// $(".infoproducto figure.visor img").mouseover(function(event){
+$(".infoproducto figure.visor img").mouseover(function(event){
 
-// 	var capturaImg = $(this).attr("src");
+	var capturaImg = $(this).attr("src");
 
-// 	$(".lupa img").attr("src", capturaImg);
+	$(".lupa img").attr("src", capturaImg);
 
-// 	$(".lupa").fadeIn("fast");
+	$(".lupa").fadeIn("fast");
 
-// 	$(".lupa").css({
+	$(".lupa").css({
 
-// 		"height":$(".visorImg").height()+"px",
-// 		"background":"#eee",
-// 		"width":"100%"
+		"height":$(".visorImg").height()+"px",
+		"background":"#eee",
+		"width":"100%"
 
-// 	})
+	})
 
-// })
+})
 
-// $(".infoproducto figure.visor img").mouseout(function(event){
+$(".infoproducto figure.visor img").mouseout(function(event){
 
-// 	$(".lupa").fadeOut("fast");
+	$(".lupa").fadeOut("fast");
 
-// })
+})
 
 $(".infoproducto figure.visor img").mousemove(function(event){
 
@@ -132,15 +140,15 @@ $("#verMas").click(function(e){
 
 		$(".comentarios").css({"overflow":"inherit"});
 
-		$("#verMas").html("Ver menos"); 
-	
+		$("#verMas").html("Ver menos");
+
 	}else{
 
 		$(".comentarios").css({"height":$(".comentarios .alturaComentarios").height()+"px",
 								"overflow":"hidden",
 								"margin-bottom":"20px"})
 
-		$("#verMas").html("Ver más"); 
+		$("#verMas").html("Ver más");
 	}
 
 })

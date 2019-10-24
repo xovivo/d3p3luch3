@@ -5,23 +5,23 @@ INFOPRODUCTO5
 .infoproducto figure.visor img{
 	display:none;
 	cursor:crosshair;
-	
+
 	}
-	
+
 	.infoproducto figure.visor img:first-child{
 	display:block;
 	}
-	
+
 	.flexslider{
 	display: inline-block;
 	cursor: pointer;
 	}
-	
+
 	.flexslider .slides{
-	
+
 	cursor: pointer;
 	}
-	
+
 	.lupa{
 	display:none;
 	position:absolute;
@@ -31,20 +31,20 @@ INFOPRODUCTO5
 	padding: 0px;
 	overflow:hidden;
 	}
-	
+
 	.lupa img{
 	position:relative;
 	margin-top:0px;
 	margin-left:0px !important;
 	width:100%;
 	}
-	
+
 	.compartirRedes{
 	border:0px;
 	box-shadow:none;
 	margin:0px;
 	}
-	
+
 	.compartirRedes li p{
 	color:white;
 	text-align: center;
@@ -54,87 +54,87 @@ INFOPRODUCTO5
 	margin-top:10px;
 	margin-bottom:20px;
 	cursor:pointer;
-	
+
 	}
-	
+
 	.btnFacebook{
 	background:#46639f;
 	}
-	
+
 	.btnGoogle{
 	background:#d6513e;
 	}
-	
+
 	.alturaComentarios{
 	height:300px;
 	}
-	
-	
+
+
 	/*=============================================
 	ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
 	=============================================*/
-	
+
 	@media (min-width:1200px){
-	
+
 	.videoPresentacion{
-	
+
 	height:415px;
 	}
-	
+
 	}
-	
+
 	/*=============================================
 	ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
 	=============================================*/
-	
+
 	@media (max-width:1199px) and (min-width:992px){
-	
+
 	.videoPresentacion{
-	
+
 	height:350px;
 	}
-	
-	
+
+
 	}
-	
+
 	/*=============================================
 	ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
 	=============================================*/
-	
+
 	@media (max-width:991px) and (min-width:768px){
-	
+
 	.videoPresentacion{
-	
+
 	height:300px;
 	}
-	
-	
-	
+
+
+
 	}
-	
+
 	/*=============================================
 	MOVIL (XS revisamos en 320px)
 	=============================================*/
-	
+
 	@media (max-width:767px){
-	
+
 	.videoPresentacion{
-	
+
 	height:200px;
 	}
-	
+
 	.fondoBreadcrumb{
 	font-size:12px;
 	}
-	
+
 	.botonesCompra button{
 	margin:5px 0;
 	}
-	
+
 	}
-	
-	
-	
+
+
+
 	.outer-div
 	{
 	  border-radius: 50%;
@@ -158,33 +158,33 @@ INFOPRODUCTO5
 	{
 	  transform: scale(5.2);
 	}
-	
-	
+
+
 	.medidas{
-	
+
 	width: 20px;
 	background-image: url(regla.png);
 	background-size: 20px;
-	height: 150px;
+	height: 30%;
 	position: absolute;
 	z-index: 10;
 	padding:10px
 	}
-	
+
 	.medidass{
-	
-	width: 150px;
+
+	width: 30%;
 	background-image: url(regla2.png);
 	background-size: 100px;
 	height: 20px;
 	position: absolute;
-	float:left;
+	float: right;
 	z-index: 10;
 	padding:10px;
 	margin-top:-20px;
 	}
 	.medidaNum{
-	
+
 	font-size: 12px;
 	width: 50px;
 	position: absolute;
@@ -194,9 +194,9 @@ INFOPRODUCTO5
 	margin-left: -20px;
 	z-index: 100;
 	}
-	
+
 	.medidaNums{
-	
+
 	font-size: 12px;
 	width: 50px;
 	position: absolute;
@@ -205,4 +205,3 @@ INFOPRODUCTO5
 	margin-top: -20px;
 	z-index: 100;
 	}
-	

@@ -19,7 +19,7 @@
         font-weight: bold !important;
     }
 
-  
+
 
 
     .quick-access {
@@ -280,12 +280,6 @@ MOVIL (XS revisamos en 320px)
         bottom: 100px !important;
     }
 
-.pageHeader {
-    /* position: fixed; */
-
-}
-
-
 
        .mundo {
            position: relative;
@@ -336,9 +330,6 @@ MOVIL (XS revisamos en 320px)
 
 }
 
-.grid0 {
-    zoom: 0.8 !important;
-}
 
 
 .colorSelect {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductosService } from '../../services/productos.service';
-
+import { PeluchesModel } from '../../models/peluches.component';
+import { Producto } from 'src/app/interfaces/producto.interface';
 @Component({
   selector: 'app-portafolio',
   templateUrl: './portafolio.component.html',
@@ -8,16 +9,21 @@ import { ProductosService } from '../../services/productos.service';
 })
 export class PortafolioComponent implements OnInit {
   id: string;
+  cargando = false;
+  pelu: PeluchesModel;
+  peluche: PeluchesModel;
+  producto: Producto;
+
+  peluches: PeluchesModel = new PeluchesModel();
+
   constructor( public productosService: ProductosService ) { }
 
 
 
 
 
-    ngOnInit() { }
-
-
+    ngOnInit() {
+    }
 
   }
-
 

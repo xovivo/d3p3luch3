@@ -1,31 +1,31 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Producto } from '../interfaces/producto.interface';
+import { PeluchesModel } from '../models/peluches.component';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductosService {
-
+  private url = 'https://sirenalive-5438a.firebaseio.com';
   cargando = true;
-  productos: Producto[] = [];
+  productos: PeluchesModel;
   productosFiltrado: Producto[] = [];
-
-
-  constructor( private http: HttpClient ) {
+  data: Producto[] = [];
+  constructor( private http: HttpClient) {
 
     this.cargarProductos();
+
 
   }
 
 
   private cargarProductos() {
 
-    return new Promise(  ( resolve, reject ) => {
-
-      this.http.get('http://ovgsoft.com/api/peluches.php')
-          .subscribe( (resp: Producto[]) => {
+    return new Promise(  ( resolve ) => {
+      this.http.get('https://ovgsoft.com/api/peluches.php')
+          .subscribe( (resp: PeluchesModel) => {
             this.productos = resp;
             this.cargando = false;
             resolve();
@@ -35,16 +35,19 @@ export class ProductosService {
 
   }
 
+
+
+
   getProducto( id: string ) {
 
-    return this.http.get(`https://chofix-450a5.firebaseio.com/productos/${ id }.json`);
+    return this.http.get(`https://sirenalive-5438a.firebaseio.com/peluches/${ id}.json`);
 
   }
 
   buscarProducto( termino: string ) {
 
 
-    if ( this.productos.length === 0 ) {
+    if ( this.productosFiltrado.length === 0 ) {
       // cargar productos
       this.cargarProductos().then( () => {
         // ejecutar después de tener los productos
@@ -67,7 +70,7 @@ export class ProductosService {
 
     termino = termino.toLocaleLowerCase();
 
-    this.productos.forEach( prod => {
+    this.productosFiltrado.forEach( prod => {
 
       const tituloLower = prod.titulo.toLocaleLowerCase();
 
@@ -79,5 +82,11 @@ export class ProductosService {
 
 
   }
+
+  crearHeroe( peluche: PeluchesModel) {
+
+    return this.http.post(`${ this.url }/pedidos.json`, peluche);
+  }
+
 
 }

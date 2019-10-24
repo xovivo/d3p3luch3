@@ -2,7 +2,7 @@ export interface ProductoDescripcion {
   descripcion: string[];
   titulo: string[];
   titular: string[];
-  id: string[];
+  id_pel: string[];
   portada: string[];
   precio: string[];
   peso: string[];
