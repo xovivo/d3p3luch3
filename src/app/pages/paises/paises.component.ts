@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PaisesService } from '../../services/paises.service';
-import { PaisInterface } from '../../interfaces/pais.interface';
+import { ItemsService } from 'src/app/service/items.service';
+import { PeluchesModel } from 'src/app/models/peluches.component';
 
 @Component({
   selector: 'app-paises',
@@ -8,16 +8,21 @@ import { PaisInterface } from '../../interfaces/pais.interface';
   styleUrls: ['./paises.component.css']
 })
 export class PaisesComponent implements OnInit {
-
-  paises: PaisInterface[] = [];
+  producto: PeluchesModel[] = [];
+  cargando = false;
 
   constructor(
-    public paisService: PaisesService
+    public itemsS: ItemsService
   ) { }
 
   ngOnInit() {
-    this.paisService.getPaises()
-      .then( paises => this.paises = paises );
+    this.cargando = true;
+    this.itemsS.getHeroes()
+      .subscribe( resp => {
+        this.producto = resp;
+        this.cargando = false;
+      });
   }
+
 
 }

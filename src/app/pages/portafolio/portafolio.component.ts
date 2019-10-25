@@ -13,6 +13,7 @@ export class PortafolioComponent implements OnInit {
   pelu: PeluchesModel;
   peluche: PeluchesModel;
   producto: Producto;
+  p = 1;
 
   peluches: PeluchesModel = new PeluchesModel();
 
@@ -24,6 +25,4 @@ export class PortafolioComponent implements OnInit {
 
     ngOnInit() {
     }
-
-  }
-
+}

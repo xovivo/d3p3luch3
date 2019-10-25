@@ -21,15 +21,15 @@
 
     <div class="container-fluid well well-sm infoproducto">
 
-        <div class="container-fluid">
+        <div class="container">
 
             <div class="row">
               <p class="medidas"><span class="medidaNum">{{ peluchu.stock }} cm</span></p>
               <p class="medidass"><span class="medidaNums">{{ peluchu.stock }} cm</span></p>
-                <div class="col-md-5 col-sm-6 col-xs-12">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="visorImg">
 
-
-                        <figure class="visor visorImg">
+                        <figure class="visor">
 
                             <img id="lupa1" class="img-thumbnail" src="https://ovgsoft.com/DpelucheWeb/{{ peluchu.portada }}">
                         </figure>
@@ -41,7 +41,7 @@
                                             <img value="1" class="img-thumbnail" src="https://ovgsoft.com/DpelucheWeb/{{ peluchu.portada }}" alt="{{ peluchu.titulo }}" draggable="false">
                                         </li>
                                         <li style="width: 100px; float: left; display: block;">
-                                            <img value="2" class="img-thumbnail" src="https://ovgsoft.com/DpelucheWeb/{{ peluchu.portada }}" alt="{{ peluchu.titulo }}" draggable="false">
+                                            <img value="2" class="img-thumbnail" src="https://ovgsoft.com/DpelucheWeb/{{ peluchu.multimedia }}" alt="{{ peluchu.titulo }}" draggable="false">
                                         </li>
                                     </ul>
                                 </div>
@@ -56,9 +56,10 @@
                                 </ul>
                             </div>
 
+                    </div>
 
-
-
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
 
 
 
@@ -120,7 +121,7 @@
 
                 </small>
 
-                </h1>
+                        </h1>
                         <h2 class="text-muted">MXN $ {{ peluchu.precio }}</h2>
                         <p>{{ peluchu.descripcion }}</p>
 
@@ -144,7 +145,7 @@
 
                   </span>
 
-                </h4>
+                            </h4>
 
                             <h4 class="col-lg-0 col-md-0 col-xs-12">
 
@@ -161,7 +162,7 @@
 
                   </small>
 
-                </h4>
+                           </h4>
                         </div>
 
                         <div class="row botonesCompra">
@@ -198,12 +199,11 @@
 
                         </div>
 
-                </div>
-              <div class="col-md-5">
 
 
 
-                            <figure class="lupa" style="display: none; background: rgb(238, 238, 238); width: 100%;">
+
+                            <figure class="lupa" style="z-index: 9999; display: none; background: rgb(238, 238, 238); width: 100%;">
                                 <img src="https://ovgsoft.com/DpelucheWeb/{{ peluchu.portada }}">
                             </figure>
 

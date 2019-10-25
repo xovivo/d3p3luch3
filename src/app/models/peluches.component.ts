@@ -7,6 +7,6 @@ export class PeluchesModel {
   precio: string;
   categoria: string;
   stock: string;
-  multimedia: any[];
+  multimedia: string;
 
 }

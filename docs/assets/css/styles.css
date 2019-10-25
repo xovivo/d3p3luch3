@@ -9176,13 +9176,13 @@ a.skip-link {
 
 .nav-primary a {
 
-  text-decoration: none;
+  text-decoration: none !important;
 
   position: relative;
 
   display: block;
 
-  color: #be8383;
+  color: #000;
   font-size: 13px;
 
 }
@@ -9470,7 +9470,7 @@ a.skip-link {
 
   .nav-primary li.level0 ul {
 
-    background: #ED3237;
+    background: rgb(224, 222, 222);
     border-top: 2px red solid;
 
     position: absolute;
@@ -9501,29 +9501,6 @@ a.skip-link {
 
   }
 
-  /*.nav-primary li.level0 ul.level0.position-test {
-
-    display: block;
-
-  }
-
-  .nav-primary li.level0 ul.level0.spill {
-
-    right: 0;
-
-    left: auto;
-
-  }
-
-  .nav-primary li.level0 ul.level0.spill li.level1 ul {
-
-    left: auto;
-
-    right: 50px;
-
-    top: 20px;
-
-  }*/
 
   .nav-primary li.level0 li.parent>a {
 

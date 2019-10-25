@@ -9,6 +9,7 @@ import { PeluchesModel } from '../models/peluches.component';
 })
 export class ProductosService {
   private url = 'https://sirenalive-5438a.firebaseio.com';
+  private urlphp = 'https://ovgsoft.com/api';
   cargando = true;
   productos: PeluchesModel;
   productosFiltrado: Producto[] = [];
@@ -24,7 +25,7 @@ export class ProductosService {
   private cargarProductos() {
 
     return new Promise(  ( resolve ) => {
-      this.http.get('https://ovgsoft.com/api/peluches.php')
+      this.http.get(`${this.url}/peluches.json`)
           .subscribe( (resp: PeluchesModel) => {
             this.productos = resp;
             this.cargando = false;
@@ -74,7 +75,7 @@ export class ProductosService {
 
       const tituloLower = prod.titulo.toLocaleLowerCase();
 
-      if ( prod.categoria.indexOf( termino ) >= 0 || tituloLower.indexOf( termino ) >= 0  ) {
+      if ( prod.descripcion.indexOf( termino ) >= 0 || tituloLower.indexOf( termino ) >= 0  ) {
         this.productosFiltrado.push( prod );
       }
 
@@ -87,6 +88,7 @@ export class ProductosService {
 
     return this.http.post(`${ this.url }/pedidos.json`, peluche);
   }
+
 
 
 }

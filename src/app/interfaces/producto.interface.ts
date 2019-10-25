@@ -6,6 +6,6 @@ export interface Producto {
     precio: string;
     categoria: string;
     stock: string;
-    multimedia: any[];
+    multimedia: string;
 
 }

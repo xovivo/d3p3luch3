@@ -26,6 +26,7 @@ import { environment } from '../environments/environment';
 import { LoginComponent } from './formularios/login/login.component';
 import { RegistroComponent } from './formularios/registro/registro.component';
 import { FormsModule } from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
 // servicios
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
+    NgxPaginationModule,
+     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [

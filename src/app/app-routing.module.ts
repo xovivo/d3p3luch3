@@ -22,7 +22,7 @@ const app_routes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'categorias', component: CategoriasComponent },
     { path: 'politicas', component: PoliticasComponent },
-    { path: 'paises', component: PaisesComponent },
+    { path: 'carrito', component: PaisesComponent },
     { path: 'item/:id_pel', component: ItemComponent},
     { path: 'categoria/:id', component: InfoproductoComponent},
     { path: 'search/:termino', component: SearchComponent },
