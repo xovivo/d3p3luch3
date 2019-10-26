@@ -51,9 +51,11 @@ export class LoginComponent implements OnInit {
 
         if ( this.recordarme ) {
           localStorage.setItem('email', this.usuario.email);
+          localStorage.setItem('us', this.usuario.password);
         }
-
-        this.router.navigateByUrl('/chat');
+        localStorage.setItem('us', this.usuario.password);
+        localStorage.setItem('email', this.usuario.email);
+        this.router.navigateByUrl('/perfil');
 
       }, (err) => {
 

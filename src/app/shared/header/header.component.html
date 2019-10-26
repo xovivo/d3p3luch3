@@ -205,7 +205,7 @@
                                 </thead>
                                 <tbody>
                                   <tr *ngFor="let heroe of producto; let i = index">
-                                    <td>{{ heroe.descripcion }} <br> <img src="https://ovgsoft.com/DpelucheWeb/{{ heroe.portada }}" style="width: 40px;" class="img-responsive"></td>
+                                    <td>{{ heroe.titulo }} <img src="./{{ heroe.multimedia1 }}" style="width: 40px;" class="img-responsive"></td>
                                     <td>{{ heroe.stock }}</td>
                                     <td>
                                       <button class="btn btn-danger">

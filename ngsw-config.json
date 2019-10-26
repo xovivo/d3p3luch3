@@ -10,10 +10,17 @@
           "/index.html",
           "/*.css",
           "/*.js",
-           "/manifest.json"
+          "/manifest.json"
         ],
         "urls": [
-          "https://stackpath.bootstrapcdn.com/**"
+          "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
+          "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
+          "https://ovgsoft.com/api/**",
+          "https://duckalive.com/assets/**",
+          "https://sirenalive-5438a.firebaseio.com/peluches.json",
+          "https://sirenalive-5438a.firebaseio.com/usuarios.json",
+          "https://sirenalive-5438a.firebaseio.com/pedidos.json",
+          "https://ovgsoft.com/DpelucheWeb/vistas/img/multimedia/**"
         ]
       }
     }, {
@@ -29,7 +36,7 @@
   ],
   "dataGroups": [
     {
-      "name": "pais-api",
+      "name": "dpeluche-api",
       "urls": [
         "https://ovgsoft.com/api/**"
       ],

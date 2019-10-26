@@ -8,12 +8,12 @@ import { PeluchesModel } from '../models/peluches.component';
   providedIn: 'root'
 })
 export class ProductosService {
-  private url = 'https://sirenalive-5438a.firebaseio.com';
+  private url = 'https://sirenalive-5438a.firebaseio.com/';
   private urlphp = 'https://ovgsoft.com/api';
   cargando = true;
   productos: PeluchesModel;
-  productosFiltrado: Producto[] = [];
-  data: Producto[] = [];
+  productosFiltrado: PeluchesModel[] = [];
+  data: PeluchesModel[] = [];
   constructor( private http: HttpClient) {
 
     this.cargarProductos();
@@ -25,8 +25,8 @@ export class ProductosService {
   private cargarProductos() {
 
     return new Promise(  ( resolve ) => {
-      this.http.get(`${this.url}/peluches.json`)
-          .subscribe( (resp: PeluchesModel) => {
+      this.http.get(`${this.urlphp}/prueba.php`)
+          .subscribe( (resp: PeluchesModel)  => {
             this.productos = resp;
             this.cargando = false;
             resolve();
@@ -36,7 +36,19 @@ export class ProductosService {
 
   }
 
+  private cargarProductoBuscar() {
 
+    return new Promise(  ( resolve ) => {
+      this.http.get(`${this.url}peluches.json`)
+          .subscribe( (resp: PeluchesModel) => {
+            this.productos = resp;
+            this.cargando = false;
+            resolve();
+          });
+
+    });
+
+  }
 
 
   getProducto( id: string ) {
@@ -50,7 +62,7 @@ export class ProductosService {
 
     if ( this.productosFiltrado.length === 0 ) {
       // cargar productos
-      this.cargarProductos().then( () => {
+      this.cargarProductoBuscar().then( () => {
         // ejecutar después de tener los productos
         // Aplicar filtro
         this.filtrarProductos( termino );
@@ -86,7 +98,8 @@ export class ProductosService {
 
   crearHeroe( peluche: PeluchesModel) {
 
-    return this.http.post(`${ this.url }/pedidos.json`, peluche);
+    const string = localStorage.getItem('us');
+    return this.http.post(`${ this.url + string}.json`, peluche);
   }
 
 

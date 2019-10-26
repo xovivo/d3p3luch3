@@ -127,28 +127,13 @@ $(window).on("load", function(){
 /*=============================================
 ALTURA COMENTARIOS
 =============================================*/
+$('#stock').on('change', function(){
 
-$(".comentarios").css({"height":$(".comentarios .alturaComentarios").height()+"px",
-						"overflow":"hidden",
-						"margin-bottom":"20px"})
+ var cantidad =  $('#stock').val();
+ var precio =  $('#precio').val();
 
-$("#verMas").click(function(e){
+ precio = (cantidad * precio).toFixed(2);
+ $('#precio').val(precio);
+alert()
 
-	e.preventDefault();
-
-	if($("#verMas").html() == "Ver más"){
-
-		$(".comentarios").css({"overflow":"inherit"});
-
-		$("#verMas").html("Ver menos");
-
-	}else{
-
-		$(".comentarios").css({"height":$(".comentarios .alturaComentarios").height()+"px",
-								"overflow":"hidden",
-								"margin-bottom":"20px"})
-
-		$("#verMas").html("Ver más");
-	}
-
-})
+});

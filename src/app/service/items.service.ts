@@ -11,7 +11,7 @@ export class ItemsService {
   cargando = true;
   productoDedc: PeluchesModel;
   total_carrito = 100;
-private url = 'https://sirenalive-5438a.firebaseio.com';
+private url = 'https://sirenalive-5438a.firebaseio.com/';
 
 
   constructor( private http: HttpClient ) {
@@ -28,7 +28,6 @@ private url = 'https://sirenalive-5438a.firebaseio.com';
             this.productoDedc = resp;
             localStorage.setItem('items', JSON.stringify( resp ) );
             this.cargando = false;
-            this.actualizar_total();
             resolve();
           });
 
@@ -44,12 +43,13 @@ private url = 'https://sirenalive-5438a.firebaseio.com';
 
 
   getHeroe( id: string ) {
-
-    return this.http.get(`${ this.url }/pedidos/${ id }.json`);
+    const string = localStorage.getItem('us');
+    return this.http.get(`${ this.url + string}/${ id }.json`);
 
   }
   getHeroes() {
-    return this.http.get(`${ this.url }/pedidos.json`)
+    const string = localStorage.getItem('us');
+    return this.http.get(`${ this.url + string }.json`)
             .pipe(
               map( this.crearArreglo ),
               delay(0)
@@ -74,14 +74,5 @@ private url = 'https://sirenalive-5438a.firebaseio.com';
   }
 
 
-  actualizar_total() {
 
-    this.total_carrito = 0;
-
-    for( const item of this.productoDedc.precio ){
-      this.total_carrito += Number( item );
-    }
-
-
-  }
 }

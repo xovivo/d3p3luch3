@@ -27,7 +27,7 @@ BREADCRUMB CARRITO DE COMPRAS
 
   <div class="container-fluid">
 
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="panel panel-default">
 
@@ -36,8 +36,13 @@ BREADCRUMB CARRITO DE COMPRAS
         ======================================-->
 
         <div class="panel-heading cabeceraCarrito">
+            <div class="col-sm-2 col-xs-0 text-center">
+                <h3>
+                  <small>CODIGO</small>
+                </h3>
 
-          <div class="col-md-6 col-sm-7 col-xs-12 text-center">
+              </div>
+          <div class="col-md-4 col-sm-7 col-xs-12 text-center">
 
             <h3>
               <small>PRODUCTO</small>
@@ -45,7 +50,7 @@ BREADCRUMB CARRITO DE COMPRAS
 
           </div>
 
-          <div class="col-md-2 col-sm-1 col-xs-0 text-center">
+          <div class="col-md-3 col-sm-1 col-xs-0 text-center">
 
             <h3>
               <small>PRECIO</small>
@@ -53,7 +58,7 @@ BREADCRUMB CARRITO DE COMPRAS
 
           </div>
 
-          <div class="col-sm-2 col-xs-0 text-center">
+          <div class="col-sm-3 col-xs-0 text-center">
 
             <h3>
               <small>CANTIDAD</small>
@@ -90,16 +95,21 @@ BREADCRUMB CARRITO DE COMPRAS
               </div>
 
             </div>
+            <div class="col-sm-2 col-xs-12">
 
-            <div class="col-sm-1 col-xs-12">
+               <br>
 
-              <figure>
+                    <p class="tituloCarritoCompra text-left">{{ heroe.ruta }}</p>
+                    <br>
+                    <figure>
 
-                <img src="https://ovgsoft.com/DpelucheWeb/{{ heroe.portada }}" class="img-thumbnail">
+                        <img src="./{{ heroe.multimedia1 }}" class="img-thumbnail">
 
-              </figure>
+                      </figure>
 
-            </div>
+
+              </div>
+
 
             <div class="col-sm-4 col-xs-12">
 
@@ -109,7 +119,7 @@ BREADCRUMB CARRITO DE COMPRAS
 
             </div>
 
-            <div class="col-md-2 col-sm-1 col-xs-12">
+            <div class="col-md-3 col-sm-1 col-xs-12">
 
               <br>
 
